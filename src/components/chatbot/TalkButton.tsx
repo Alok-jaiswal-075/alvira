@@ -39,7 +39,7 @@ export default function TalkButton({
             onClick={userCall}
             style={{ height: '40px' }} // Match the button height with the icon
           >
-            <div className="w-[110px] h-[30px] text-xl text-slate-300 font-bold flex justify-center items-center transition-all duration-300 ease-in-out hover:text-slate-500">
+            <div className="w-[110px] h-[30px] text-xl text-slate-800 font-bold flex justify-center items-center transition-all duration-300 ease-in-out hover:text-slate-500">
               {INITIALS.call}
             </div>
           </button>
