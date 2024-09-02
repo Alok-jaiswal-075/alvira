@@ -26,7 +26,7 @@ function ProductPage() {
 
     return (
         <div>
-            <Navbar/>
+        <Navbar/>
         <div className="bg-transparent py-10 px-5">
             <div className="flex flex-row justify-center items-stretch min-h-[600px] w-full">
                 <div className="px-8 py-2 w-[50%] flex flex-col justify-between gap-4">
