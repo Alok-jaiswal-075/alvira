@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        
+        'parallax':'url(../public/hero.jpg)'
       },
       colors: {
         background: "#F1F2F2",
@@ -26,6 +26,7 @@ export default {
         link : 14,
         linksm:12,
         normal : 20,
+        small : 15
 
       }
     },
