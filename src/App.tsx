@@ -1,13 +1,10 @@
-import Index from "./components/hero"
-// import Navbar from "./components/navbar"
+import HomePage from "./pages/HomePage"
 
 function App() {
 
   return (
-    <div className="font-oswald">
-      {/* <Navbar/> */}
-      <Index/>
-      <div className="h-[100vh] bg-background">dfadf</div>
+    <div>
+      <HomePage/>
     </div>
   )
 }
