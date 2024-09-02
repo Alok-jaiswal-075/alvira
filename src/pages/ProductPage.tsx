@@ -5,6 +5,7 @@ import Navbar from '../components/navbar';
 import Lottie from "lottie-react";
 import animation from "../../public/chatbotAnimation.json";
 import { GiCancel } from 'react-icons/gi';
+import ChatBot from '../components/chatbot';
 
 function ProductPage() {
 
@@ -37,9 +38,12 @@ function ProductPage() {
             <Navbar/>
             <div className='relative'>
                 <div className='fixed bottom-6 right-6 cursor-pointer'>
-                    <Lottie animationData={animation} loop={true} className={`w-[200px] h-[200px] mr-2 ml-2 ${isDialogueOpen ? 'hidden':''}`} onClick={handleOpen}/>
-                    <div className={`h-[80vh] w-[30vw] bg-card rounded-xl ${!isDialogueOpen ? 'hidden':''} relative`}>
-                        <div className='absolute top-4 right-4 cursor-pointer' onClick={() => setDialogueOpen(false)}><GiCancel size={20}/></div>
+                    <Lottie animationData={animation} loop={true} className={`w-[200px] h-[200px] mr-2 ml-2 ${isDialogueOpen ? 'hidden':''} duration-700`} onClick={handleOpen}/>
+                    <div className={`h-[80vh] w-[30vw] bg-card rounded-xl ${!isDialogueOpen ? 'hidden':''} relative duration-700`}>
+                        <div className='absolute top-4 right-4 cursor-pointer'>
+                            <div onClick={() => setDialogueOpen(false)}><GiCancel size={20} color='white'/></div>
+                            <ChatBot/>
+                        </div>
                     </div>
                 </div>
                 <div className="bg-transparent py-10 px-5">
