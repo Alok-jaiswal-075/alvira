@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import { IoIosCheckmark } from "react-icons/io";
+import Navbar from '../components/navbar';
 
 function ProductPage() {
 
@@ -24,6 +25,8 @@ function ProductPage() {
   }
 
     return (
+        <div>
+            <Navbar/>
         <div className="bg-transparent py-10 px-5">
             <div className="flex flex-row justify-center items-stretch min-h-[600px] w-full">
                 <div className="px-8 py-2 w-[50%] flex flex-col justify-between gap-4">
@@ -163,6 +166,7 @@ function ProductPage() {
 
                 </div>
             </div>
+        </div>
         </div>
     );
 }

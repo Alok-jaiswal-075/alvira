@@ -1,16 +1,17 @@
 // import Index from "./components/hero"
-import Navbar from "./components/navbar"
 import ProductPage from "./pages/ProductPage"
+import HomePage from "./pages/HomePage"
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
 
   return (
-    <div className="font-oswald">
-      <Navbar/>
-      {/* <Index/>
-      <div className="h-[100vh] bg-background">dfadf</div> */}
-      <ProductPage/>
-    </div>
+    <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<HomePage/>}/>
+          <Route path='/product/:id' element={<ProductPage/>}/>
+        </Routes>
+    </BrowserRouter>
   )
 }
 
