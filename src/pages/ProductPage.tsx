@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import { IoIosCheckmark } from "react-icons/io";
 import Navbar from '../components/navbar';
@@ -6,7 +6,6 @@ import Lottie from "lottie-react";
 import animation from "../../public/chatbotAnimation.json";
 import { GiCancel } from 'react-icons/gi';
 import ChatBot from '../components/chatbot';
-import ProductCard from '../components/card/ProductCard';
 import Divider from '../components/divider';
 import Reviews from '../components/reviews';
 import CategoryCard from '../components/card/CategoryCard';
@@ -41,7 +40,7 @@ function ProductPage() {
         <div>
             <Navbar/>
             <div className='relative'>
-                <div className='fixed bottom-6 right-6 cursor-pointer'>
+                <div className='fixed bottom-6 right-6 cursor-pointer z-20'>
                     <Lottie animationData={animation} loop={true} className={`w-[200px] h-[200px] mr-2 ml-2 ${isDialogueOpen ? 'hidden':''} duration-700`} onClick={handleOpen}/>
                     <div className={`h-[80vh] w-[25vw] bg-slate-300 rounded-xl ${!isDialogueOpen ? 'hidden':''} relative duration-700 shadow-xl`}>
                         <div className='absolute top-4 right-4 cursor-pointer'>
