@@ -15,6 +15,7 @@ export default {
         "electronics":'url(../public/laptop.jpg)',
         "iphone":'url(../public/iphone.png)',
         "s24":'url(../public/s24.jpg)',
+        "user":'url(../public/user.png)',
       },
       colors: {
         background: "#F1F2F2",

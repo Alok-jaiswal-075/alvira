@@ -6,6 +6,10 @@ import Lottie from "lottie-react";
 import animation from "../../public/chatbotAnimation.json";
 import { GiCancel } from 'react-icons/gi';
 import ChatBot from '../components/chatbot';
+import ProductCard from '../components/card/ProductCard';
+import Divider from '../components/divider';
+import Reviews from '../components/reviews';
+import CategoryCard from '../components/card/CategoryCard';
 
 function ProductPage() {
 
@@ -46,7 +50,7 @@ function ProductPage() {
                         <ChatBot/>
                     </div>
                 </div>
-                <div className="bg-transparent py-10 px-5">
+                <div className="bg-transparent py-10 px-5 flex flex-col items-center justify-center gap-6 w-full">
                     <div className="flex flex-row justify-center items-stretch min-h-[600px] w-full">
                         <div className="px-8 py-2 w-[50%] flex flex-col justify-between gap-4">
                             <div className="h-[60%]">
@@ -185,6 +189,28 @@ function ProductPage() {
 
                         </div>
                     </div>
+
+                    <div className='flex flex-col gap-5 items-center justify-center w-full'>
+                        <Divider headingSm="You may like" headingLg="Ratings and Reviews"/>
+
+                        <Reviews/>
+
+                    </div>
+
+                    <div className='flex flex-col items-center justify-center gap-4 w-full'>
+                        <Divider headingSm="You may like" headingLg="Related Products"/>
+
+                        <div className='flex justify-center items-center min-h-fit w-full'>
+                            <div className='w-[80%] grid grid-cols-5 gap-5'>
+                                <CategoryCard image={'bg-decor'} category={'900.00'} />
+                                <CategoryCard image={'bg-electronics'} category={'120000.00'} />
+                                <CategoryCard image={'bg-furniture'} category={'50000.00'} />
+                                <CategoryCard image={'bg-furniture'} category={'50000.00'} />
+                                <CategoryCard image={'bg-furniture'} category={'50000.00'} />
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
