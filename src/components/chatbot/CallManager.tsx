@@ -5,7 +5,7 @@ import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognitio
 // import { useLanguage } from './LanguageManager';
 
 import { getChatGptAnswer } from './callUtil';
-import { CallHistoryType } from './CallHistory';
+// import { CallHistoryType } from './CallHistory';
 import { INITIALS } from './initials';
 
 export interface MessageType {
@@ -82,10 +82,18 @@ const CallManager: React.FC<CallManagerProps> = ({ children }) => {
       return;
     }
     const utterance = new SpeechSynthesisUtterance(message);
+    const voices = userSpeechSynthesis.getVoices();
+    // console.log(voices);
+    const selectedVoice = voices.find(voice=>voice.name === 'Microsoft Ravi - English (India)') || voices[0];
     // utterance.lang = selectedLanguage;
     utterance.lang = 'en-US';
     utterance.onstart = handleChatbotSpeechStart;
     utterance.onend = handleChatbotSpeechEnd;
+    utterance.voice=selectedVoice;
+
+    utterance.pitch=1.2;
+    utterance.rate=1;
+    utterance.volume=1
     userSpeechSynthesis.speak(utterance);
   };
 
@@ -183,15 +191,15 @@ const CallManager: React.FC<CallManagerProps> = ({ children }) => {
     setMessages(defaultMessage);
   };
 
-  const updateCallHistory = () => {
-    if (userLocalStorage && messages.length > 1) {
-      const storage = userLocalStorage.getItem('callHistory')
-        ? JSON.parse(userLocalStorage.getItem('callHistory') as string)
-        : [];
-      const newCallHistory: CallHistoryType[] = [...storage, { messages, date: new Date() }];
-      userLocalStorage?.setItem('callHistory', JSON.stringify(newCallHistory));
-    }
-  };
+  // const updateCallHistory = () => {
+  //   if (userLocalStorage && messages.length > 1) {
+  //     const storage = userLocalStorage.getItem('callHistory')
+  //       ? JSON.parse(userLocalStorage.getItem('callHistory') as string)
+  //       : [];
+  //     const newCallHistory: CallHistoryType[] = [...storage, { messages, date: new Date() }];
+  //     userLocalStorage?.setItem('callHistory', JSON.stringify(newCallHistory));
+  //   }
+  // };
 
   const hangUp = () => {
     SpeechRecognition.stopListening();
@@ -208,7 +216,7 @@ const CallManager: React.FC<CallManagerProps> = ({ children }) => {
 
   const endCall = () => {
     hangUp();
-    updateCallHistory();
+    // updateCallHistory();
   };
 
   return (
