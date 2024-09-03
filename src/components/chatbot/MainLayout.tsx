@@ -1,6 +1,6 @@
 import CallBob from './CallBob';
 // import LanguageDropdown from './LanguageDropdown';
-import { Layout } from 'antd';
+// import { Layout } from 'antd';
 // import LanguageManager from './LanguageManager';
 // import { Fragment } from 'react';
 // import { CallHistory } from './CallHistory';
@@ -8,7 +8,7 @@ import { Layout } from 'antd';
 import CallManager from './CallManager';
 // import styles from './styles/styles.module.css';
 
-const { Header, Content } = Layout;
+// const { Header, Content } = Layout;
 export default function MainLayout() {
   return (
     <div className="flex justify-center items-center h-full w-full">

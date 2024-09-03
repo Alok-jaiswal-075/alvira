@@ -18,7 +18,7 @@ function ProductPage() {
   const [quantity,setQuantity] = useState(1);
   const [isDialogueOpen, setDialogueOpen] = useState(false);
 
-  const handleImageChange = (newImage,dotColor) => {
+  const handleImageChange = (newImage: string,dotColor: string) => {
     setSelectedImage(newImage);
     setSelectedDot(dotColor);
   };
@@ -43,9 +43,12 @@ function ProductPage() {
             <div className='relative'>
                 <div className='fixed bottom-6 right-6 cursor-pointer'>
                     <Lottie animationData={animation} loop={true} className={`w-[200px] h-[200px] mr-2 ml-2 ${isDialogueOpen ? 'hidden':''} duration-700`} onClick={handleOpen}/>
-                    <div className={`h-[80vh] w-[30vw] bg-slate-300 rounded-xl ${!isDialogueOpen ? 'hidden':''} relative duration-700 shadow-xl`}>
+                    <div className={`h-[80vh] w-[25vw] bg-slate-300 rounded-xl ${!isDialogueOpen ? 'hidden':''} relative duration-700 shadow-xl`}>
                         <div className='absolute top-4 right-4 cursor-pointer'>
                             <div onClick={() => setDialogueOpen(false)}><GiCancel size={20} color='black'/></div>
+                        </div>
+                        <div className='absolute top-4 left-4 cursor-pointer'>
+                            <div onClick={() => setDialogueOpen(false)}><span className='font-bold text-[#212529]'>AL<span className='text-gray-600'>VI</span>RA AI</span></div>
                         </div>
                         <ChatBot/>
                     </div>
@@ -66,7 +69,7 @@ function ProductPage() {
                                         className="h-full w-full object-cover"
                                         src="https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/product-04-b-246x300.jpg"
                                         alt="Product Thumbnail 1"
-                                        onClick={() => handleImageChange('https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/product-04-b-246x300.jpg')}
+                                        onClick={() => handleImageChange('https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/product-04-b-246x300.jpg','')}
                                     />
                                 </div>
                                 <div className="w-[50%] h-full">
@@ -74,7 +77,7 @@ function ProductPage() {
                                         className="h-full w-full object-cover"
                                         src="https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/product-04-a-246x300.jpg"
                                         alt="Product Thumbnail 2"
-                                        onClick={() => handleImageChange('https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/product-04-a-246x300.jpg')}
+                                        onClick={() => handleImageChange('https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/product-04-a-246x300.jpg','')}
                                     />
                                 </div>
                             </div>

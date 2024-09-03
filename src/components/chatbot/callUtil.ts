@@ -23,9 +23,16 @@ export async function getChatGptAnswer(messagesWithSender: { message: string; se
   ];
 
   try {
-    const response = await fetch(`/api/chat/message`, {
-      method: METHODS.POST,
-      body: JSON.stringify(chatGptApiMessages),
+    const response = await fetch(`https://api.openai.com/v1/chat/completions`, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${"openapi key"}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: 'gpt-3.5-turbo',
+        chatGptApiMessages,
+      }),
     });
 
     if (!response.ok) {
