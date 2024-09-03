@@ -4,8 +4,8 @@ import React from 'react';
 // import { useTranslation } from 'next-i18next';
 import Lottie from "lottie-react";
 import aiAnimation from "../../../public/Animation - 1725269749563.json";
-import aiAnimation2 from "../../../public/Animation - 1725269749563.json";
-import aiAnimation3 from "../../../public/Animation - 1725269749563.json";
+import aiAnimation2 from "../../../public/Animation - 1725271005923.json";
+import aiAnimation3 from "../../../public/Animation - 1725272152735.json";
 
 import { INITIALS } from './initials';
 

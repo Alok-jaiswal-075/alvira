@@ -23,6 +23,7 @@ interface CallContextType {
   handleSend: (message: string) => void;
   messages: MessageType[];
   isChatbotSpeaking: boolean;
+  setVoiceType: (voice: string) => void;
 }
 
 const CallContext = createContext<CallContextType | undefined>(undefined);
@@ -60,6 +61,8 @@ const CallManager: React.FC<CallManagerProps> = ({ children }) => {
   ];
   const [messages, setMessages] = useState<MessageType[]>(defaultMessage);
 
+  const [voiceType, setVoiceType] = useState('Microsoft Ravi - English (India)');
+
   useEffect(() => {
     setUserSpeechSynthesis(window.speechSynthesis);
     setUserLocalStorage(localStorage);
@@ -84,7 +87,7 @@ const CallManager: React.FC<CallManagerProps> = ({ children }) => {
     const utterance = new SpeechSynthesisUtterance(message);
     const voices = userSpeechSynthesis.getVoices();
     // console.log(voices);
-    const selectedVoice = voices.find(voice=>voice.name === 'Microsoft Ravi - English (India)') || voices[0];
+    const selectedVoice = voices.find(voice=>voice.name === voiceType) || voices[0];
     // utterance.lang = selectedLanguage;
     utterance.lang = 'en-US';
     utterance.onstart = handleChatbotSpeechStart;
@@ -92,7 +95,7 @@ const CallManager: React.FC<CallManagerProps> = ({ children }) => {
     utterance.voice=selectedVoice;
 
     utterance.pitch=1.2;
-    utterance.rate=1;
+    utterance.rate= voiceType==='Microsoft Heera - English (India)' ? 2 : 1;
     utterance.volume=1
     userSpeechSynthesis.speak(utterance);
   };
@@ -231,6 +234,7 @@ const CallManager: React.FC<CallManagerProps> = ({ children }) => {
         handleSend,
         messages,
         isChatbotSpeaking: isBobSpeaking,
+        setVoiceType,
       }}
     >
       {children}
