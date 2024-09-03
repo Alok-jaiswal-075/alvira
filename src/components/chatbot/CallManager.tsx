@@ -135,7 +135,7 @@ const CallManager: React.FC<CallManagerProps> = ({ children }) => {
       isChatbotSpeaking.current = false;
       setIsBobSpeaking(false);
     }
-    const chatGPTAnswer = await getChatGptAnswer(updatedMessages);
+    const chatGPTAnswer = await getChatGptAnswer(message,"user");
     setMessages([
       ...updatedMessages,
       {
@@ -143,8 +143,8 @@ const CallManager: React.FC<CallManagerProps> = ({ children }) => {
         sender: 'ChatGPT',
       },
     ]);
-    // chatBotSpeak(chatGPTAnswer);
-    chatBotSpeak("Hello I am Alvira");
+    chatBotSpeak(chatGPTAnswer);
+    // chatBotSpeak("Hello I am Alvira");
   };
 
   const userSpeak = () => {

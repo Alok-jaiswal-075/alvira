@@ -20,6 +20,7 @@ def index():
 def post_question():
     json = request.get_json(silent=True)
     question = json['question']
+    print(question)
     user_id = json['user_id']
     logging.info("post question `%s` for user `%s`", question, user_id)
 

@@ -8,7 +8,7 @@ from llama_index.llms.groq import Groq
 # from llama_index.llms.huggingface import HuggingFaceLLM
 # from llama_index.llms.huggingface_api import HuggingFaceInferenceAPI
 
-from llama_index.llms.ollama import Ollama
+# from llama_index.llms.ollama import Ollama
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.core import (Settings, VectorStoreIndex, SimpleDirectoryReader, PromptTemplate)
 from llama_index.core import StorageContext
@@ -48,6 +48,7 @@ def init_index(embed_model):
     logging.info("index creating with `%d` documents", len(documents))
 
     chroma_client = chromadb.EphemeralClient()
+    chroma_client.clear_system_cache()
     chroma_collection = chroma_client.create_collection("iollama")
 
     vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
@@ -67,13 +68,13 @@ def init_query_engine(index):
     # custome prompt template
     template = (
         "Imagine you are a salesman at a store, with access to all current and relevant information on each of your products, "
-        "services and accessories. Your goal is to provide insightful, accurate, and concise answers to questions in this domain.\n\n"
+        "services and accessories. Your goal is to provide accurate and concise answers to questions in this domain.\n\n"
         "Here is some context related to the query:\n"
         "-----------------------------------------\n"
         "{context_str}\n"
         "-----------------------------------------\n"
-        "Considering the above information, please respond to the following inquiry in a concise and professional manner. "
-        "Keep your word limit between 10 and 60 while answering and use paragraphs instead of bullet points:\n\n"
+        "Considering the above information, please respond to the following inquiry in a brief and professional manner. "
+        "Don't use more than 30 words to answer:\n\n"
         "Question: {query_str}\n\n"
         "Answer succinctly and ensure your response is understandable to someone who does not have prior knowledge of that product."
     )
