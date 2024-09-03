@@ -4,6 +4,7 @@ import 'regenerator-runtime/runtime';
 import MessageBox from './MessageBox';
 import TalkButton from './TalkButton';
 import { useCallManager } from './CallManager';
+import { useParams } from 'react-router-dom';
 
 export default function CallBob() {
   const {
@@ -16,7 +17,16 @@ export default function CallBob() {
     handleSend,
     messages,
     isChatbotSpeaking,
+    setVoiceType
   } = useCallManager();
+
+  const {id} = useParams<{id:string}>();
+
+  if(id=="1013" || id=="2242"){
+    setVoiceType('Microsoft Ravi - English (India)');
+  }else{
+    setVoiceType('Microsoft Heera - English (India)')
+  }
 
   return (
     <div className="flex h-full flex-col items-center justify-center w-full overflow-auto px-8 pt-[50px]">

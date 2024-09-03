@@ -16,20 +16,24 @@ export const iphone = {
     },
     "description":{
         "des": "Super Retina XDR display, 12 MP camera, fast MagSafe charging, Siri, Face ID, and IP68 dust/water resistance.",
-        "des1": "iPhone 14: 15.40 cm 6.06 screen with curved corners.",
-        "des2":"12 MP dual cameras, Portrait mode, Focus, Depth Control.",
-        "des3":"MagSafe wireless charging (15 W) and Qi wireless charging (7.5 W). Fast-charge to 50% in 30 minutes with a 20 W adapter. Up to 20 hours video, 16 hours streaming, 80 hours audio playback.",
-        "des4":""
+        "des1": "256 GB ROM",
+        "des2":"15.49 cm (6.1 inch) Super Retina XDR Display",
+        "des3":"12MP + 12MP | 12MP Front Camera",
+        "des4":"A15 Bionic Chip, 6 Core Processor Processor"
     },
     "features":{
-        "feat1":"",
-        "feat2":"",
-        "feat3":""
+        "feat1":"iPhone 14: 15.40 cm 6.06 screen with curved corners.",
+        "feat2":"12 MP dual cameras, Portrait mode, Focus, Depth Control.",
+        "feat3":"MagSafe wireless charging (15 W) and Qi wireless charging (7.5 W). Fast-charge to 50% in 30 minutes with a 20 W adapter. Up to 20 hours video, 16 hours streaming, 80 hours audio playback.",
+        "feat4":"Use voice commands for messages, reminders, and shortcuts with “Hey Siri.”",
+        "feat5":"This iPhone is IP68 rated (maximum depth of 6 metres up to 30 minutes).",
     },
     "specification":{
-        "spec1":"",
-        "spec2":"",
-        "spec3":"",
+        "spec1":"In the box: Handset, USB-C to Lightning Cable, Documentation",
+        "spec2":"Model No.: MPVX3HN/A",
+        "spec3":"SIM Type: Dual Sim(Nano + eSIM)",
+        "spec4":"Sound Enhancements: Built-in Stereo Speaker",
+        "spec5":"Touchscreen"
     },
     "reviews": [
         "Excellent performance and camera quality. Worth the price!",
@@ -38,7 +42,7 @@ export const iphone = {
         "Face ID is incredibly secure and fast. Highly recommend this phone."
     ]
 }
-
+  
 export const s24 = {
     "catg1": "Home / Mobiles / Samsung Mobiles / Samsung s24",
     "catg2": "Samsung s24 ultra",
@@ -102,6 +106,7 @@ export const blazer = {
         "des1": " Includes a crop top, wide-leg trousers, and a full-sleeve blazer.",
         "des2":"Perfect for casual, office, and evening wear.",
         "des3":" This ensemble features an inner crop top, a pair of wide-leg trousers, and a matching blazer.",
+        "des4":""
     },
     "features":{
         "feat1":"Style: Wide collar",
@@ -138,10 +143,11 @@ export const shirt = {
         "offer3":"Saving time with our business IT features",
     },
     "description":{
-        "des": "shirt for men || casual shirt for men || men stylish shirt",
+        "des": "shirt for men, casual shirt for men, men stylish shirt",
         "des1": "Black crochet shirt for men half sleeve men shirts",
         "des2":"cuban crochet collar shirts for men white",
         "des3":"Half-sleeve popcorn shirt for men to wear on Goa beach in summer",
+        "des4":""
     },
     "features":{
         "feat1":"Design: Black crochet",

@@ -13,9 +13,11 @@ export default {
         "furniture":'url(../public/furniture.jpg)',
         "clothes":'url(../public/clothes.jpg)',
         "electronics":'url(../public/laptop.jpg)',
-        "iphone":'url(../public/iphone.png)',
-        "s24":'url(../public/s24.jpg)',
+        "iphone":'url(../public/iphone14.jpg)',
+        "s24":'url(../public/samsungs24.jpg)',
         "user":'url(../public/user.png)',
+        "niketshirt":'url(../public/cloth1.jpg)',
+        "pumatshirt":'url(../public/cloth2.jpg)'
       },
       colors: {
         background: "#F1F2F2",

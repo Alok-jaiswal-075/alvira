@@ -27,12 +27,12 @@ function HomePage() {
         <Divider headingSm="Featured Products" headingLg="Featured Products"/>
 
         <div className='flex justify-center items-center min-h-fit'>
-            <div className='w-[80%] grid grid-cols-3 gap-5'>
-                <ProductCard image={'bg-decor'} name={'lamp'} price={'900.00'}/>
-                <ProductCard image={'bg-electronics'} name={'laptop'} price={'120000.00'}/>
-                <ProductCard image={'bg-furniture'} name={'sofa'} price={'50000.00'}/>
-                <ProductCard image={'bg-iphone'} name={'iphone'} price={'150000.00'}/>
-                <ProductCard image={'bg-s24'} name={'s24'} price={'130000.00'}/>
+            <div className='w-[80%] grid grid-cols-3 gap-5 cursor-pointer'>
+                <ProductCard image={'bg-iphone'} name={'Apple iPhone 14 ((PRODUCT)RED, 512 GB)'} price={'69,999.00'}/>
+                <ProductCard image={'bg-s24'} name={'SAMSUNG Galaxy S24 Ultra 5G (Titanium Violet, 256 GB)  (12 GB RAM)'} price={'1,29,999.00'}/>
+                <ProductCard image={'bg-niketshirt'} name={'Women Solid Round Neck Polyester Black T-Shirt'} price={'1036.00'}/>
+                <ProductCard image={'bg-pumatshirt'} name={'Active Tee Women Solid Round Neck Polyester Black T-Shirt'} price={'699.00'}/>
+                <ProductCard image={'bg-furniture'} name={'Trevi Bliss E2O Premium Velvet Fabric 3 Seater Sofa'} price={'50000.00'}/>
             </div>
         </div>
 
